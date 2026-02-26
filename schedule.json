@@ -1,0 +1,71 @@
+{
+  "days": [
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 1).",
+        "url": "https://youtube.com/live/JG71JXa9YtQ"
+      },
+      "evening": {
+        "text": "⏳ Через 5 минут вечерняя практика (День 1).",
+        "url": "https://youtube.com/live/3kBnzp4vAK0"
+      }
+    },
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 2).",
+        "url": "https://youtube.com/live/xbGs954b5Ig"
+      }
+    },
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 3).",
+        "url": "https://youtube.com/live/kh5CTvPceQA"
+      }
+    },
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 4).",
+        "url": "https://youtube.com/live/YuZNvSDe5zU"
+      }
+    },
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 5).",
+        "url": "https://youtube.com/live/4r0dEysyBlA"
+      }
+    },
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 6).",
+        "url": "https://youtube.com/live/eDS6AF_0YBk"
+      },
+      "evening": {
+        "text": "⏳ Через 5 минут вечерняя практика (День 6).",
+        "url": "https://youtube.com/live/9C3HB5jSd0Y"
+      }
+    },
+    {
+      "morning": {
+        "text": "⏳ Через 5 минут утренняя практика (День 7).",
+        "url": "https://youtube.com/live/vFGUWTdRLwo"
+      }
+    }
+  ],
+  "bonus": {
+    "day_number": 8,
+    "evening": {
+      "text": "🎁 Через 5 минут бонусная практика (День 8).",
+      "url": "https://youtube.com/live/WqQMVMXuYR8"
+    }
+  },
+  "tutorial_buttons": [
+    { "label": "Холодный душ", "url": "https://youtu.be/NCWxXhGIx-s" },
+    { "label": "Тибетская гимнастика", "url": "https://youtu.be/iz4oyguXnkE" },
+    { "label": "Сурья Намаскар", "url": "https://youtu.be/WTB1IUfh2bQ" },
+    { "label": "Дыхание Хоф", "url": "https://youtu.be/0BNejY1e9ik" },
+    { "label": "Анулома Вилома", "url": "https://youtu.be/RK1RPo4eS20" },
+    { "label": "Цигун", "url": "https://youtu.be/t-UaJPNaEig" },
+    { "label": "🆘 Помощь / Связаться", "url": "https://t.me/arthur_lucky" }
+
+  ]
+}
