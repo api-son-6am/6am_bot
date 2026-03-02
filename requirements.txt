@@ -1,2 +1,2 @@
-python-telegram-bot==21.8
-timezonefinder
+python-telegram-bot[job-queue]==21.8
+timezonefinder==6.5.4
