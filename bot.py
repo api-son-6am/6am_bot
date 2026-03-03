@@ -22,6 +22,9 @@ from telegram.ext import (
 
 TOKEN = os.getenv("BOT_TOKEN")
 
+ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")  # set this in Railway Variables
+
+
 USERS_FILE = "users.json"
 SCHEDULE_FILE = "schedule.json"
 
@@ -339,6 +342,28 @@ async def tz_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=build_tz_keyboard(),
     )
 
+async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """
+    Admin-only: delete one user by chat_id from users.json
+    Usage: /reset <chat_id>
+    """
+    if not ADMIN_CHAT_ID or str(update.effective_chat.id) != str(ADMIN_CHAT_ID):
+        return
+
+    if not context.args:
+        await update.message.reply_text("Использование: /reset <chat_id>")
+        return
+
+    target_id = str(context.args[0]).strip()
+    users = load_json(USERS_FILE, {})
+
+    if target_id in users:
+        del users[target_id]
+        save_json(USERS_FILE, users)
+        await update.message.reply_text(f"✅ Пользователь {target_id} сброшен.")
+    else:
+        await update.message.reply_text("ℹ️ Пользователь не найден.")
+
 
 async def on_location(update: Update, context: ContextTypes.DEFAULT_TYPE):
     loc = update.message.location
@@ -522,6 +547,7 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("tz", tz_cmd))
 
+    app.add_handler(CommandHandler("reset", reset))
     # LOCATION must be before TEXT
     app.add_handler(MessageHandler(filters.LOCATION, on_location))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, on_text))
